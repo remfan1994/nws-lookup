@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">NWS Lookup</string>
+    <string name="about_title">About NWS Lookup</string>
+    <string name="vegetarian_reminder">"Not vegetarian?  www.bloodguiltcurse.net will change your mind."</string>
+    <string name="vegetarian_website" translatable="false">www.bloodguiltcurse.net</string>
+    <string name="vegetarian_url" translatable="false">https://www.bloodguiltcurse.net</string>
+    <string name="about_byline">by ThatIAm.vip</string>
+    <string name="about_website" translatable="false">www.thatiam.vip</string>
+    <string name="about_website_url" translatable="false">https://www.thatiam.vip</string>
+    <string name="about_author" translatable="false">remfan1994</string>
+    <string name="about_email" translatable="false">r94@thatiam.vip</string>
+    <string name="about_license">IALA (open source)</string>
+    <string name="about_license_url" translatable="false">https://remfan1994.github.io/insha-allah-license-agreement/</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="link_unavailable">No app is available to open this link.</string>
+    <string name="highlight_title">Highlight terms</string>
+    <string name="highlight_prompt">Highlight these terms:</string>
+    <string name="highlight_hint">One term or phrase per line</string>
+    <string name="highlight_help">Separate terms with commas or new lines. Leave blank to turn highlighting off.</string>
+    <string name="highlight_presets_description">Add highlight preset</string>
+    <string name="highlight_save">Save</string>
+    <string name="highlight_clear">Clear</string>
+    <string name="highlight_input_limit">Use %1$d characters or fewer. The last edit was not added.</string>
+    <string name="highlight_preset_rain">Rain and precipitation</string>
+    <string name="highlight_preset_wind">Wind</string>
+    <string name="highlight_preset_winter">Snow and ice</string>
+    <string name="highlight_preset_heat">Heat</string>
+</resources>

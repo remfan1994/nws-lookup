@@ -1,0 +1,56 @@
+{
+  "java": "OpenJDK17.0.20+8-1-24.04-Ubuntu",
+  "gradle": "8.9",
+  "androidGradlePlugin": "8.6.1",
+  "compileSdk": 35,
+  "buildTools": "34.0.0",
+  "robolectric": "4.14.1",
+  "junit": "4.13.2",
+  "verifiedDownloads": [
+    {
+      "name": "gradle-8.9-bin.zip",
+      "url": "https://downloads.gradle.org/distributions/gradle-8.9-bin.zip",
+      "algorithm": "sha256",
+      "digest": "d725d707bfabd4dfdc958c624003b3c80accc03f7037b5122c4b1d0ef15cecab",
+      "bytes": 136114148
+    },
+    {
+      "name": "platform-35_r02.zip",
+      "url": "https://dl.google.com/android/repository/platform-35_r02.zip",
+      "algorithm": "sha1",
+      "digest": "0bb560a90a7a2cbd0dd8348224d518b638fe7949",
+      "bytes": 64273788
+    },
+    {
+      "name": "build-tools_r34-linux.zip",
+      "url": "https://dl.google.com/android/repository/build-tools_r34-linux.zip",
+      "algorithm": "sha1",
+      "digest": "d6d58e0c6925a9e4d9a541e84cd1f405c2f9d2a9",
+      "bytes": 61224257
+    },
+    {
+      "name": "android-all-instrumented-15-robolectric-12650502-i7.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/robolectric/android-all-instrumented/15-robolectric-12650502-i7/android-all-instrumented-15-robolectric-12650502-i7.jar",
+      "algorithm": "sha512",
+      "digest": "87bdd0341838f5f630e1ff412ab29cb2f06e0f8cb7751f14679d11b4ee6084873001f8f6a8581ae6e139fa7c9a654b632412827430f984ebecc3c2588674f7e7",
+      "bytes": 199527464
+    }
+  ],
+  "reusedFramework": {
+    "sdk": 33,
+    "bytes": 163233590,
+    "sha512": "0ffcb15c867dcfd87e57b6eef601067de84d23db0e818f8ea8a6035745482a144e91eb65a7f532dd9614ce27eba67204b117b7185058c2aac074dcb26e62acc9",
+    "reusedExistingCache": true,
+    "checksumUrl": "https://repo.maven.apache.org/maven2/org/robolectric/android-all-instrumented/13-robolectric-9030017-i7/android-all-instrumented-13-robolectric-9030017-i7.jar.sha512"
+  },
+  "maxTestHeap": "1024m",
+  "maxParallelForks": 1,
+  "forkEvery": 1,
+  "scope": "15 new feature tests onAPI35 plus7 adjacent UI/lifecycle regressions; the same15 feature tests on assertedAPI33; normal release assembly/lint and binary metadata inspection.",
+  "limitations": [
+    "Android framework JVM tests under Robolectric; no device or emulator was used.",
+    "The previous long-duration test suite was not rerun for this feature.",
+    "API26 was not newly exercised in this feature turn.",
+    "No signing or publication performed."
+  ]
+}

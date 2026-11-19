@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Android stress tests are opt-in; release builds keep their original dependencies.
+if (project.hasProperty('androidStress')) {
+    apply from: rootProject.file('tests/android-stress.gradle')
+}
+
+android {
+    namespace 'vip.thatiam.nwslookup'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'vip.thatiam.nwslookup'
+        minSdk 26
+        targetSdk 35
+        versionCode 15
+        versionName '1.0.14'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

@@ -1,0 +1,101 @@
+{
+  "application_id": "vip.thatiam.nwslookup",
+  "version": "1.0.14",
+  "version_code": 15,
+  "android_api": 33,
+  "framework": "Robolectric 4.14.1",
+  "main_activity_sha256": "1f8132603a60ed08e20564cba886f34eeb574588f79ae64bde4128b23f313026",
+  "tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 16.178,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.Api33HighlightSettingsTest",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 16.178,
+      "cases": [
+        {
+          "name": "aFreshInstallAndAnEmptyReportStayUnstyled",
+          "seconds": 7.33,
+          "result": "passed"
+        },
+        {
+          "name": "clearIsAnEditableDraftAndSavingAnEmptyListTurnsHighlightsOff",
+          "seconds": 1.146,
+          "result": "passed"
+        },
+        {
+          "name": "presetsAppendEditableTermsAndRepeatedSelectionDoesNotDuplicateThem",
+          "seconds": 1.931,
+          "result": "passed"
+        },
+        {
+          "name": "applyingAndDisablingHighlightsPreservesTheChosenViewTextAndReadingPosition",
+          "seconds": 0.584,
+          "result": "passed"
+        },
+        {
+          "name": "savingWhileFetchProgressOrAnErrorIsVisibleDoesNotReplaceOrStyleTheMessage",
+          "seconds": 0.396,
+          "result": "passed"
+        },
+        {
+          "name": "reportSpanLimitStaysBoundedAcrossRepeatedRendering",
+          "seconds": 1.685,
+          "result": "passed"
+        },
+        {
+          "name": "saveNormalizesTermsAndStylesOnlyMatchingWordsInAllThreeReports",
+          "seconds": 0.194,
+          "result": "passed"
+        },
+        {
+          "name": "malformedStoredHighlightPreferencesFailClosedAndCanBeRepaired",
+          "seconds": 0.435,
+          "result": "passed"
+        },
+        {
+          "name": "invalidDraftsKeepTheEditorOpenAndPreserveTheSavedSetting",
+          "seconds": 0.701,
+          "result": "passed"
+        },
+        {
+          "name": "detailsOpensAnAccessibleMultilineEditorWithAdjacentPresetButton",
+          "seconds": 0.159,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedReportRendersNeverAccumulateSpans",
+          "seconds": 0.427,
+          "result": "passed"
+        },
+        {
+          "name": "savedTermsSurviveActivityRecreationAndAColdReopen",
+          "seconds": 0.318,
+          "result": "passed"
+        },
+        {
+          "name": "cancelAndBackLeaveTheSavedSettingAndCurrentReportUnchanged",
+          "seconds": 0.269,
+          "result": "passed"
+        },
+        {
+          "name": "unsavedAndClearedDraftsSurviveRotationWithoutApplyingThemselves",
+          "seconds": 0.451,
+          "result": "passed"
+        },
+        {
+          "name": "anExistingInstallWithNoHighlightPreferenceHasNoAutomaticPrecipitationEmphasis",
+          "seconds": 0.149,
+          "result": "passed"
+        }
+      ]
+    }
+  ],
+  "limitations": "JVM Android framework tests; no physical device or emulator used."
+}

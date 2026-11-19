@@ -1,0 +1,100 @@
+{
+  "apkFilename": "app-release-unsigned.apk",
+  "apkBytes": 62085,
+  "apkSha256": "d6bb4010c4a7dd63663d8075aab2352f6d629eb6f983b56f2685d0e61fc113d4",
+  "package": "vip.thatiam.nwslookup",
+  "versionCode": 15,
+  "versionName": "1.0.14",
+  "minSdk": 26,
+  "targetSdk": 35,
+  "packageAndVersionVerified": true,
+  "sdkVersionsVerified": true,
+  "permissions": [
+    "android.permission.INTERNET",
+    "android.permission.ACCESS_NETWORK_STATE"
+  ],
+  "activityCount": 1,
+  "serviceCount": 0,
+  "receiverCount": 0,
+  "providerCount": 0,
+  "assets": {
+    "LICENSE.md": {
+      "identicalToSource": true,
+      "sha256": "16f5cc0b2a43d1c2f85b0f1a0c44a20de73bf4e5dcf6b6597ee9e544d2955e41",
+      "bytes": 6080
+    },
+    "NOTICE.md": {
+      "identicalToSource": true,
+      "sha256": "2e9fe18a5dcc78c051e1a42d6ef849dafbabd011a9a0fda45d3cffa353b1dc13",
+      "bytes": 2076
+    }
+  },
+  "requiredFeatureAndAboutStringsPresent": {
+    "Highlight terms": true,
+    "Highlight these terms:": true,
+    "Add highlight preset": true,
+    "Rain and precipitation": true,
+    "Wind": true,
+    "Snow and ice": true,
+    "Heat": true,
+    "About NWS Lookup": true,
+    "Not vegetarian?  www.bloodguiltcurse.net will change your mind.": true,
+    "by ThatIAm.vip": true,
+    "www.thatiam.vip": true,
+    "remfan1994": true,
+    "r94@thatiam.vip": true,
+    "IALA (open source)": true,
+    "https://remfan1994.github.io/insha-allah-license-agreement/": true
+  },
+  "unwantedDexPrefixesPresent": {
+    "org/robolectric": false,
+    "org/junit": false,
+    "androidx/test": false,
+    "net/thatiam/nwslookup": false
+  },
+  "highlightPolicyPackaged": true,
+  "uiVersionPresentInDex": true,
+  "nativeLibraries": [],
+  "lint": {
+    "errors": 0,
+    "warnings": 18,
+    "countsById": {
+      "ApplySharedPref": 1,
+      "PluralsCandidate": 1,
+      "ObsoleteSdkInt": 1,
+      "MonochromeLauncherIcon": 2,
+      "SetTextI18n": 13
+    },
+    "additionalWarningExplanation": "PluralsCandidate recommends quantity localization for the fixed8192-character error message; the English message is correct for the configured limit."
+  },
+  "productionSourceSha256": {
+    "MainActivity.java": "1f8132603a60ed08e20564cba886f34eeb574588f79ae64bde4128b23f313026",
+    "HighlightTerms.java": "0413765a08c38a7fa99d8c843b307f1a99866b27567266b3aeba78e63592d0cb"
+  },
+  "releaseTasks": [
+    "assembleRelease",
+    "lintRelease"
+  ],
+  "testDependenciesEnabledForRelease": false,
+  "signing": "Unsigned temporary inspection build only; no signing or publishing performed.",
+  "sourceMatch": {
+    "comparedFiles": 20,
+    "allIdentical": true,
+    "differences": [],
+    "mainActivitySha256": "1f8132603a60ed08e20564cba886f34eeb574588f79ae64bde4128b23f313026",
+    "highlightTermsSha256": "0413765a08c38a7fa99d8c843b307f1a99866b27567266b3aeba78e63592d0cb"
+  },
+  "apkIntegrity": {
+    "apkSha256": "d6bb4010c4a7dd63663d8075aab2352f6d629eb6f983b56f2685d0e61fc113d4",
+    "zipEntryCount": 10,
+    "zipCrcCheckPassed": true,
+    "zipBadEntry": null,
+    "zipalignExitCode": 0,
+    "zipalign4ByteCheckPassed": true,
+    "signatureVerificationExitCode": 1,
+    "signatureFiles": [],
+    "apkSigningBlockPresent": false,
+    "expectedUnsignedBuildConfirmed": true,
+    "inspectionOnly": true
+  }
+}

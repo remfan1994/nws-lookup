@@ -1,0 +1,74 @@
+{
+  "run": "api35-final-network",
+  "android_api": 35,
+  "runtime": "Robolectric 4.14.1 on JDK 17",
+  "main_activity_sha256": "e5fe5bff1e8eacfede78c6a9ea406d536fdf49ab878d7060a29f0b8e8393fbb1",
+  "note": "All eight network tests on final production source",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 4.372,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.NetworkLongevityTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 4.372,
+      "recorded_timestamp": "2026-10-20T22:39:43",
+      "cases": [
+        {
+          "name": "representativePointLookupStopsAfterEightStationRequests",
+          "seconds": 3.123,
+          "result": "passed"
+        },
+        {
+          "name": "mappingExpiryAndRetiredUrlRetryStayBounded",
+          "seconds": 0.137,
+          "result": "passed"
+        },
+        {
+          "name": "deeplyNestedResponseFailsWithoutStackOverflow",
+          "seconds": 0.027,
+          "result": "passed"
+        },
+        {
+          "name": "oversizedAndPartialResponsesCannotBypassLimits",
+          "seconds": 0.169,
+          "result": "passed"
+        },
+        {
+          "name": "eighthRepresentativeStationCanSucceedAfterEmptyEntries",
+          "seconds": 0.029,
+          "result": "passed"
+        },
+        {
+          "name": "failedWeatherCommitPreservesThePreviouslySavedReport",
+          "seconds": 0.079,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedHttpSuccessAndFailuresCloseAllConnections",
+          "seconds": 0.071,
+          "result": "passed"
+        },
+        {
+          "name": "failedFetchesPreserveCacheAndReleaseCoordinator",
+          "seconds": 0.737,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "REPRESENTATIVE_POINT_LIMIT listed=100 requests=9",
+        "MAPPING_SOAK: 200 expiry/404/410/outage cases, request bounds held",
+        "RESPONSE_LIMIT_SOAK: 40 oversized responses rejected and closed",
+        "REPRESENTATIVE_POINT_EIGHTH requests=9 ignoredEmptyEntries=116",
+        "WEATHER_WRITE_FAILURE injections=25 priorCachePreservedOnDiskAndInMemory=true",
+        "NETWORK_SOAK: 1500 operations, 1800 connections, all closed",
+        "COORDINATOR_SOAK: 600 fetches, 150 successes, 450 preserved-cache failures"
+      ]
+    }
+  ]
+}

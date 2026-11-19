@@ -1,0 +1,41 @@
+{
+  "run": "intermediate-before-request-cap",
+  "android_api": 35,
+  "runtime": "Robolectric 4.14.1 on JDK 17",
+  "main_activity_sha256": "aceabe8b1ad4ec1851f82074bb24e347a11701e556f199c92a6736dea0d91499",
+  "note": "Uncapped representative-point request probe, separate from original baseline",
+  "tests": 2,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 3.269,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.NetworkLongevityTest",
+      "tests": 2,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 3.269,
+      "recorded_timestamp": "2026-10-20T22:37:48",
+      "cases": [
+        {
+          "name": "representativePointLookupStopsAfterEightStationRequests",
+          "seconds": 3.224,
+          "result": "failed",
+          "failure_type": "java.lang.AssertionError",
+          "failure_message": "java.lang.AssertionError: one office request plus at most eight observation-station attempts expected:<9> but was:<101>"
+        },
+        {
+          "name": "eighthRepresentativeStationCanSucceedAfterEmptyEntries",
+          "seconds": 0.045,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "REPRESENTATIVE_POINT_LIMIT listed=100 requests=101",
+        "REPRESENTATIVE_POINT_EIGHTH requests=9 ignoredEmptyEntries=116"
+      ]
+    }
+  ]
+}

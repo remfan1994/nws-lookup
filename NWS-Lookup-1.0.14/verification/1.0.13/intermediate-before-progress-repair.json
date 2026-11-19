@@ -1,0 +1,32 @@
+{
+  "run": "intermediate-before-progress-repair",
+  "android_api": 35,
+  "runtime": "Robolectric 4.14.1 on JDK 17",
+  "main_activity_sha256": "1f9f55a3eefebc82a0e99d8f1fc46eb3ab1ba582cd11dbe8504192b5cea1eb57",
+  "note": "Strengthened office-mismatch UI regression before restoring current view",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 5.521,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.LifecycleSoakTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 5.521,
+      "recorded_timestamp": "2026-10-20T22:35:34",
+      "cases": [
+        {
+          "name": "resultForDifferentOfficeCannotReplaceSelectedOffice",
+          "seconds": 5.521,
+          "result": "failed",
+          "failure_type": "java.lang.AssertionError",
+          "failure_message": "java.lang.AssertionError: completed mismatched fetch left permanent progress text"
+        }
+      ]
+    }
+  ]
+}

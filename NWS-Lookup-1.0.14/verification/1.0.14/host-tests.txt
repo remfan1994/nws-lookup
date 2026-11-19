@@ -1,0 +1,8 @@
+NWS Lookup forecast cache policy: PASS (68 assertions)
+HIGHLIGHT_BOUND: 24 repeated 2097151-character reports; at most 2000 spans; late/no-match scans; 165 ms; max heap 32 MiB
+NWS Lookup highlight terms: PASS (48194 assertions)
+JSON depth guard: PASS (200 near-2-MiB scans; depth, quote and malformed-input boundaries)
+MAX_RESPONSE_SOAK: 200 exact/oversized 2-MiB reads under a 32-MiB JVM heap
+NWS Lookup host invariants: PASS
+NWS Lookup Java syntax parse: PASS (7 files)
+NWS Lookup source invariants: PASS

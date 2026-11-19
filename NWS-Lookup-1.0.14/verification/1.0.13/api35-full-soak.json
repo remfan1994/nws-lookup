@@ -1,0 +1,237 @@
+{
+  "run": "api35-full-soak",
+  "android_api": 35,
+  "runtime": "Robolectric 4.14.1 on JDK 17",
+  "main_activity_sha256": "1f9f55a3eefebc82a0e99d8f1fc46eb3ab1ba582cd11dbe8504192b5cea1eb57",
+  "note": "Full accelerated suite before the final UI and request-bound follow-ups",
+  "tests": 32,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 58.633,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.CacheLongevityTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 9.666,
+      "recorded_timestamp": "2026-10-20T22:33:21",
+      "cases": [
+        {
+          "name": "modernUnknownFetchTimesAreNotReplacedByAnotherViewsNewerFetchTime",
+          "seconds": 3.32,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedOfficeSwitchesRestoreOnlyTheMatchingSavedReports",
+          "seconds": 5.234,
+          "result": "passed"
+        },
+        {
+          "name": "tenThousandSerializationCyclesKeepEachReportIdentityAndBoundedSize",
+          "seconds": 0.287,
+          "result": "passed"
+        },
+        {
+          "name": "wrongTypeReportFieldsDoNotBecomeWeatherText",
+          "seconds": 0.023,
+          "result": "passed"
+        },
+        {
+          "name": "persistedFontStepIsClampedOnStartup",
+          "seconds": 0.114,
+          "result": "passed"
+        },
+        {
+          "name": "legacyMigrationRunsOnceAndDoesNotRelabelOlderReports",
+          "seconds": 0.031,
+          "result": "passed"
+        },
+        {
+          "name": "deeplyNestedSavedJsonCannotCrashStartupOrOfficeSelection",
+          "seconds": 0.311,
+          "result": "passed"
+        },
+        {
+          "name": "malformedAndOversizedCacheCannotStrandStartup",
+          "seconds": 0.156,
+          "result": "passed"
+        },
+        {
+          "name": "wrongTypePreferencesDoNotCrashColdActivityStartup",
+          "seconds": 0.095,
+          "result": "passed"
+        },
+        {
+          "name": "fiftyDiskReloadsDoNotGrowTheSavedCache",
+          "seconds": 0.094,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "CACHE_OFFICE_SWITCH cycles=200 switches=400",
+        "CACHE_SERIALIZATION cycles=10000 minChars=985 maxChars=985",
+        "CACHE_DISK_RELOAD cycles=50 maxBytes=1651"
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.CacheWriteFailureTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 4.822,
+      "recorded_timestamp": "2026-10-20T22:33:15",
+      "cases": [
+        {
+          "name": "abandonedTemporaryWritesKeepTheLastCompleteOfficeList",
+          "seconds": 4.217,
+          "result": "passed"
+        },
+        {
+          "name": "interruptedLegacyWriteRestoresTheBackup",
+          "seconds": 0.085,
+          "result": "passed"
+        },
+        {
+          "name": "concurrentReadCannotRollBackAnActiveOfficeListWrite",
+          "seconds": 0.353,
+          "result": "passed"
+        },
+        {
+          "name": "interruptedWritesAlwaysKeepThePreviousOfficeList",
+          "seconds": 0.166,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "CACHE_ABANDONED_WRITES recoveries=100",
+        "CACHE_WRITE_FAILURE injections=150 successAfterFailures=1"
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.LifecycleSoakTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 39.704,
+      "recorded_timestamp": "2026-10-20T22:33:31",
+      "cases": [
+        {
+          "name": "coldReopenCannotReplayAnOldCompletionUnderAnotherOffice",
+          "seconds": 5.06,
+          "result": "passed"
+        },
+        {
+          "name": "inFlightCompletionFollowsFortyActivityRecreations",
+          "seconds": 1.982,
+          "result": "passed"
+        },
+        {
+          "name": "oneThousandActivityLifetimesDoNotAccumulateAppCallbacks",
+          "seconds": 15.033,
+          "result": "passed"
+        },
+        {
+          "name": "completionWhileStoppedIsDeliveredOnceOnRestart",
+          "seconds": 0.076,
+          "result": "passed"
+        },
+        {
+          "name": "completionDuringTheStartupCacheReadIsNotLost",
+          "seconds": 0.067,
+          "result": "passed"
+        },
+        {
+          "name": "resultForDifferentOfficeCannotReplaceSelectedOffice",
+          "seconds": 0.043,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedReadOnlyDialogsFiltersAndCanceledFetchesStayOffline",
+          "seconds": 9.043,
+          "result": "passed"
+        },
+        {
+          "name": "completionAfterFreshCreateBeforeStartIsDelivered",
+          "seconds": 0.043,
+          "result": "passed"
+        },
+        {
+          "name": "destroyedActivityOwnersAreReleasedWithGcDiagnostics",
+          "seconds": 1.235,
+          "result": "passed"
+        },
+        {
+          "name": "clockCenturyBoundariesAndOldCachesRemainReadable",
+          "seconds": 0.049,
+          "result": "passed"
+        },
+        {
+          "name": "oneYearOfMinuteTicksKeepsOneCallbackAndDoesNotReplaceWeather",
+          "seconds": 7.026,
+          "result": "passed"
+        },
+        {
+          "name": "ageRefreshAndResumePreserveTheChosenReportAndScroll",
+          "seconds": 0.046,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "LIFECYCLE_GC_DIAGNOSTIC collected=100 total=100; deterministic callback/listener checks passed"
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.NetworkLongevityTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 4.441,
+      "recorded_timestamp": "2026-10-20T22:34:11",
+      "cases": [
+        {
+          "name": "mappingExpiryAndRetiredUrlRetryStayBounded",
+          "seconds": 3.292,
+          "result": "passed"
+        },
+        {
+          "name": "deeplyNestedResponseFailsWithoutStackOverflow",
+          "seconds": 0.028,
+          "result": "passed"
+        },
+        {
+          "name": "oversizedAndPartialResponsesCannotBypassLimits",
+          "seconds": 0.206,
+          "result": "passed"
+        },
+        {
+          "name": "failedWeatherCommitPreservesThePreviouslySavedReport",
+          "seconds": 0.082,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedHttpSuccessAndFailuresCloseAllConnections",
+          "seconds": 0.068,
+          "result": "passed"
+        },
+        {
+          "name": "failedFetchesPreserveCacheAndReleaseCoordinator",
+          "seconds": 0.765,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "MAPPING_SOAK: 200 expiry/404/410/outage cases, request bounds held",
+        "RESPONSE_LIMIT_SOAK: 40 oversized responses rejected and closed",
+        "WEATHER_WRITE_FAILURE injections=25 priorCachePreservedOnDiskAndInMemory=true",
+        "NETWORK_SOAK: 1500 operations, 1800 connections, all closed",
+        "COORDINATOR_SOAK: 600 fetches, 150 successes, 450 preserved-cache failures"
+      ]
+    }
+  ]
+}

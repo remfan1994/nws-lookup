@@ -1,0 +1,40 @@
+// Opt-in JVM Android stress tests. These dependencies are not packaged in the app.
+android {
+    sourceSets {
+        test {
+            java.srcDirs = [rootProject.file('tests/android')]
+            if (project.hasProperty('androidStressMin26')) {
+                java.srcDir rootProject.file('tests/android-min26')
+            }
+            if (project.hasProperty('androidStressApi33')) {
+                java.srcDir rootProject.file('tests/android-api33')
+            }
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                maxHeapSize = '1024m'
+                maxParallelForks = 1
+                // The HTTP-boundary suite installs a process-wide URL handler.
+                forkEvery = 1
+                systemProperty 'robolectric.dependency.repo.url', 'https://repo.maven.apache.org/maven2'
+                if (project.hasProperty('robolectricSdkDir')) {
+                    systemProperty 'robolectric.offline', 'true'
+                    systemProperty 'robolectric.dependency.dir', project.property('robolectricSdkDir')
+                }
+                testLogging {
+                    events 'passed', 'skipped', 'failed'
+                    exceptionFormat 'full'
+                    showStandardStreams = true
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.14.1'
+}

@@ -1,0 +1,33 @@
+{
+  "java": "OpenJDK17.0.20+8-1-24.04-Ubuntu",
+  "gradle": "8.9",
+  "gradleDistributionSha256": "d725d707bfabd4dfdc958c624003b3c80accc03f7037b5122c4b1d0ef15cecab",
+  "androidGradlePlugin": "8.6.1",
+  "androidCompileSdk": 35,
+  "androidBuildTools": "34.0.0",
+  "robolectric": "4.14.1",
+  "junit": "4.13.2",
+  "robolectricSdkSha512": {
+    "android-all-instrumented-8.0.0_r4-robolectric-r1-i7.jar": "c55e2053f3ae35d617ce02b0ecd311c1f72fcd671eaff873fb203e106b2dc444b870677b71be546a062045fc0a473926bb1668bd43f9051176826aab3f732aab",
+    "android-all-instrumented-15-robolectric-12650502-i7.jar": "87bdd0341838f5f630e1ff412ab29cb2f06e0f8cb7751f14679d11b4ee6084873001f8f6a8581ae6e139fa7c9a654b632412827430f984ebecc3c2588674f7e7"
+  },
+  "testJvmMaxHeap": "1024m",
+  "testForkEvery": 1,
+  "testMaxParallelForks": 1,
+  "limitations": [
+    "JVM Android framework tests; no physical device or emulator was used.",
+    "Logical clock advancement and repeated callbacks are accelerated; no years-long wall-clock installation test was run.",
+    "GC counts describe observed harness runs; no physical-device RAM/battery claim is made.",
+    "HTTP-boundary tests use scripted connections; no stress traffic was sent to NWS."
+  ],
+  "documentation": [
+    "https://robolectric.org/compatibility_table/",
+    "https://robolectric.org/getting-started/"
+  ],
+  "officialDownloads": [
+    "https://downloads.gradle.org/distributions/gradle-8.9-bin.zip",
+    "https://dl.google.com/android/repository/platform-35_r02.zip",
+    "https://dl.google.com/android/repository/build-tools_r34-linux.zip",
+    "https://repo.maven.apache.org/maven2/org/robolectric/android-all-instrumented/"
+  ]
+}

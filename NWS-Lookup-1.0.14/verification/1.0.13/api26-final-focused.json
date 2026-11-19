@@ -1,0 +1,156 @@
+{
+  "run": "api26-final-focused",
+  "android_api": 26,
+  "runtime": "Robolectric 4.14.1 on JDK 17",
+  "main_activity_sha256": "e5fe5bff1e8eacfede78c6a9ea406d536fdf49ab878d7060a29f0b8e8393fbb1",
+  "note": "Eighteen focused minimum-version checks; each subclass asserts runtime API26",
+  "tests": 18,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 12.06,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.Min26CacheTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 3.208,
+      "recorded_timestamp": "2026-10-20T22:40:13",
+      "cases": [
+        {
+          "name": "modernUnknownFetchTimesAreNotReplacedByAnotherViewsNewerFetchTime",
+          "seconds": 1.733,
+          "result": "passed"
+        },
+        {
+          "name": "persistedFontStepIsClampedOnStartup",
+          "seconds": 1.038,
+          "result": "passed"
+        },
+        {
+          "name": "deeplyNestedSavedJsonCannotCrashStartupOrOfficeSelection",
+          "seconds": 0.276,
+          "result": "passed"
+        },
+        {
+          "name": "wrongTypePreferencesDoNotCrashColdActivityStartup",
+          "seconds": 0.161,
+          "result": "passed"
+        }
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.Min26CacheWriteTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 2.649,
+      "recorded_timestamp": "2026-10-20T22:40:17",
+      "cases": [
+        {
+          "name": "interruptedLegacyWriteRestoresTheBackup",
+          "seconds": 2.175,
+          "result": "passed"
+        },
+        {
+          "name": "concurrentReadCannotRollBackAnActiveOfficeListWrite",
+          "seconds": 0.33,
+          "result": "passed"
+        },
+        {
+          "name": "interruptedWritesAlwaysKeepThePreviousOfficeList",
+          "seconds": 0.143,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "CACHE_WRITE_FAILURE injections=150 successAfterFailures=1"
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.Min26LifecycleTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 4.531,
+      "recorded_timestamp": "2026-10-20T22:40:20",
+      "cases": [
+        {
+          "name": "coldReopenCannotReplayAnOldCompletionUnderAnotherOffice",
+          "seconds": 2.54,
+          "result": "passed"
+        },
+        {
+          "name": "inFlightCompletionFollowsFortyActivityRecreations",
+          "seconds": 1.4,
+          "result": "passed"
+        },
+        {
+          "name": "completionWhileStoppedIsDeliveredOnceOnRestart",
+          "seconds": 0.133,
+          "result": "passed"
+        },
+        {
+          "name": "completionDuringTheStartupCacheReadIsNotLost",
+          "seconds": 0.059,
+          "result": "passed"
+        },
+        {
+          "name": "resultForDifferentOfficeCannotReplaceSelectedOffice",
+          "seconds": 0.212,
+          "result": "passed"
+        },
+        {
+          "name": "completionAfterFreshCreateBeforeStartIsDelivered",
+          "seconds": 0.069,
+          "result": "passed"
+        },
+        {
+          "name": "ageRefreshAndResumePreserveTheChosenReportAndScroll",
+          "seconds": 0.114,
+          "result": "passed"
+        }
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.Min26NetworkTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 1.672,
+      "recorded_timestamp": "2026-10-20T22:40:25",
+      "cases": [
+        {
+          "name": "representativePointLookupStopsAfterEightStationRequests",
+          "seconds": 1.481,
+          "result": "passed"
+        },
+        {
+          "name": "deeplyNestedResponseFailsWithoutStackOverflow",
+          "seconds": 0.038,
+          "result": "passed"
+        },
+        {
+          "name": "eighthRepresentativeStationCanSucceedAfterEmptyEntries",
+          "seconds": 0.028,
+          "result": "passed"
+        },
+        {
+          "name": "failedWeatherCommitPreservesThePreviouslySavedReport",
+          "seconds": 0.124,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "REPRESENTATIVE_POINT_LIMIT listed=100 requests=9",
+        "REPRESENTATIVE_POINT_EIGHTH requests=9 ignoredEmptyEntries=116",
+        "WEATHER_WRITE_FAILURE injections=25 priorCachePreservedOnDiskAndInMemory=true"
+      ]
+    }
+  ]
+}

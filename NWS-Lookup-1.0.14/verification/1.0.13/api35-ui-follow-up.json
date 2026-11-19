@@ -1,0 +1,50 @@
+{
+  "run": "api35-ui-follow-up",
+  "android_api": 35,
+  "runtime": "Robolectric 4.14.1 on JDK 17",
+  "main_activity_sha256": "aceabe8b1ad4ec1851f82074bb24e347a11701e556f199c92a6736dea0d91499",
+  "note": "Five affected lifecycle checks after progress repair; before independent resolver cap",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 6.119,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.LifecycleSoakTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 6.119,
+      "recorded_timestamp": "2026-10-20T22:37:09",
+      "cases": [
+        {
+          "name": "coldReopenCannotReplayAnOldCompletionUnderAnotherOffice",
+          "seconds": 5.36,
+          "result": "passed"
+        },
+        {
+          "name": "completionWhileStoppedIsDeliveredOnceOnRestart",
+          "seconds": 0.22,
+          "result": "passed"
+        },
+        {
+          "name": "completionDuringTheStartupCacheReadIsNotLost",
+          "seconds": 0.114,
+          "result": "passed"
+        },
+        {
+          "name": "resultForDifferentOfficeCannotReplaceSelectedOffice",
+          "seconds": 0.344,
+          "result": "passed"
+        },
+        {
+          "name": "completionAfterFreshCreateBeforeStartIsDelivered",
+          "seconds": 0.081,
+          "result": "passed"
+        }
+      ]
+    }
+  ]
+}

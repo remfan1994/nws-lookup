@@ -1,0 +1,82 @@
+{
+  "apkFilename": "app-release-unsigned.apk",
+  "apkBytes": 53689,
+  "apkSha256": "44fa65618fbdbd2dbaf556a91b42dea40bea81ba9bd54d03d4aee4be8052a898",
+  "package": "vip.thatiam.nwslookup",
+  "versionCode": 14,
+  "versionName": "1.0.13",
+  "minSdk": 26,
+  "targetSdk": 35,
+  "packageAndVersionVerified": true,
+  "sdkVersionsVerified": true,
+  "permissions": [
+    "android.permission.INTERNET",
+    "android.permission.ACCESS_NETWORK_STATE"
+  ],
+  "activityCount": 1,
+  "serviceCount": 0,
+  "receiverCount": 0,
+  "providerCount": 0,
+  "assets": {
+    "LICENSE.md": {
+      "identicalToSource": true,
+      "sha256": "16f5cc0b2a43d1c2f85b0f1a0c44a20de73bf4e5dcf6b6597ee9e544d2955e41",
+      "bytes": 6080
+    },
+    "NOTICE.md": {
+      "identicalToSource": true,
+      "sha256": "2e9fe18a5dcc78c051e1a42d6ef849dafbabd011a9a0fda45d3cffa353b1dc13",
+      "bytes": 2076
+    }
+  },
+  "expectedAboutStringsPresent": {
+    "About NWS Lookup": true,
+    "Not vegetarian?  www.bloodguiltcurse.net will change your mind.": true,
+    "by ThatIAm.vip": true,
+    "www.thatiam.vip": true,
+    "remfan1994": true,
+    "r94@thatiam.vip": true,
+    "IALA (open source)": true,
+    "https://remfan1994.github.io/insha-allah-license-agreement/": true
+  },
+  "forbiddenDexPrefixesPresent": {
+    "org/robolectric": false,
+    "org/junit": false,
+    "androidx/test": false,
+    "net/thatiam/nwslookup": false
+  },
+  "uiVersionPresentInDex": true,
+  "nativeLibraries": [],
+  "lint": {
+    "errors": 0,
+    "warnings": 17,
+    "countsById": {
+      "ApplySharedPref": 1,
+      "ObsoleteSdkInt": 1,
+      "MonochromeLauncherIcon": 2,
+      "SetTextI18n": 13
+    },
+    "intentionalWarning": "ApplySharedPref at rollback.commit(): synchronous rollback is deliberate, runs on the weather worker, and is covered by failed-write tests."
+  },
+  "mainActivitySha256": "e5fe5bff1e8eacfede78c6a9ea406d536fdf49ab878d7060a29f0b8e8393fbb1",
+  "build": "assembleRelease and lintRelease passed; normal release configuration, Android stress properties absent",
+  "signing": "unsigned build used for inspection only; no publication or signing performed",
+  "zipCrcIntegrity": "passed",
+  "zipAlignment": {
+    "command": "zipalign -c 4 app-release-unsigned.apk",
+    "exitCode": 0,
+    "result": "passed"
+  },
+  "signatureInspection": {
+    "command": "apksigner verify --verbose --print-certs app-release-unsigned.apk",
+    "exitCode": 1,
+    "result": "expected unsigned result",
+    "output": "DOES NOT VERIFY\nERROR: Missing META-INF/MANIFEST.MF"
+  },
+  "debuggableFlagPresent": false,
+  "sourceMatch": {
+    "comparedFiles": 18,
+    "allIdentical": true,
+    "mainActivitySha256": "e5fe5bff1e8eacfede78c6a9ea406d536fdf49ab878d7060a29f0b8e8393fbb1"
+  }
+}

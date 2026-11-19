@@ -1,0 +1,98 @@
+[
+  {
+    "run": "original-1.0.12",
+    "android_api": 35,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "2947548ea096a2f29b20aa50277026ee7d331501fcce5ad13f873b3147ae76c3",
+    "note": "Original production source; temporary runtime smoke omitted",
+    "tests": 17,
+    "failures": 8,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 17.481
+  },
+  {
+    "run": "intermediate-before-file-lock",
+    "android_api": 35,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "8960f17dad21682f955d550dadfa1cb267041c10a834d95313ece0c937d99582",
+    "note": "Intermediate AtomicFile repair before read/write lock",
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 4.341
+  },
+  {
+    "run": "api35-full-soak",
+    "android_api": 35,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "1f9f55a3eefebc82a0e99d8f1fc46eb3ab1ba582cd11dbe8504192b5cea1eb57",
+    "note": "Full accelerated suite before the final UI and request-bound follow-ups",
+    "tests": 32,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 58.633
+  },
+  {
+    "run": "intermediate-before-progress-repair",
+    "android_api": 35,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "1f9f55a3eefebc82a0e99d8f1fc46eb3ab1ba582cd11dbe8504192b5cea1eb57",
+    "note": "Strengthened office-mismatch UI regression before restoring current view",
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 5.521
+  },
+  {
+    "run": "api35-ui-follow-up",
+    "android_api": 35,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "aceabe8b1ad4ec1851f82074bb24e347a11701e556f199c92a6736dea0d91499",
+    "note": "Five affected lifecycle checks after progress repair; before independent resolver cap",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 6.119
+  },
+  {
+    "run": "intermediate-before-request-cap",
+    "android_api": 35,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "aceabe8b1ad4ec1851f82074bb24e347a11701e556f199c92a6736dea0d91499",
+    "note": "Uncapped representative-point request probe, separate from original baseline",
+    "tests": 2,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 3.269
+  },
+  {
+    "run": "api35-final-network",
+    "android_api": 35,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "e5fe5bff1e8eacfede78c6a9ea406d536fdf49ab878d7060a29f0b8e8393fbb1",
+    "note": "All eight network tests on final production source",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 4.372
+  },
+  {
+    "run": "api26-final-focused",
+    "android_api": 26,
+    "runtime": "Robolectric 4.14.1 on JDK 17",
+    "main_activity_sha256": "e5fe5bff1e8eacfede78c6a9ea406d536fdf49ab878d7060a29f0b8e8393fbb1",
+    "note": "Eighteen focused minimum-version checks; each subclass asserts runtime API26",
+    "tests": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "test_seconds": 12.06
+  }
+]

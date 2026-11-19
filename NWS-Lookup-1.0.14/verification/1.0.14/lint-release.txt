@@ -1,0 +1,118 @@
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:2683: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+                            rollback.commit();
+                                     ~~~~~~~~
+
+   Explanation for issues of type "ApplySharedPref":
+   Consider using apply() instead of commit on shared preferences. Whereas
+   commit blocks and writes its data to persistent storage immediately, apply
+   will handle it in the background.
+
+app/src/main/res/values/strings.xml:23: Warning: Formatting %d followed by words ("characters"): This should probably be a plural rather than a string [PluralsCandidate]
+    <string name="highlight_input_limit">Use %1$d characters or fewer. The last edit was not added.</string>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "PluralsCandidate":
+   This lint check looks for potential errors in internationalization where
+   you have translated a message which involves a quantity and it looks like
+   other parts of the string may need grammatical changes.
+
+   For example, rather than something like this:
+     <string name="try_again">Try again in %d seconds.</string>
+   you should be using a plural:
+      <plurals name="try_again">
+           <item quantity="one">Try again in %d second</item>
+           <item quantity="other">Try again in %d seconds</item>
+       </plurals>
+   This will ensure that in other languages the right set of translations are
+   provided for the different quantity classes.
+
+   (This check depends on some heuristics, so it may not accurately determine
+   whether a string really should be a quantity. You can use tools:ignore to
+   filter out false positives.
+
+   https://developer.android.com/guide/topics/resources/string-resource.html#Plurals
+
+app/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml:1: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml:1: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:388: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                stationStatusView.setText("Updating WFO list from NWS...");
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:437: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                stationStatusView.setText("WFO list update failed. Showing existing list. " + snapshot.errorMessage);
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:437: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                stationStatusView.setText("WFO list update failed. Showing existing list. " + snapshot.errorMessage);
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:749: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                stationStatusView.setText("Select a station before fetching weather.");
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:826: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        title.setText("Select Forecast Office");
+                      ~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:844: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        filterLabel.setText("Filter");
+                            ~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:913: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            stationStatusView.setText("Cached station data could not be read; showing built-in station list. " + cleanError(e));
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:913: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            stationStatusView.setText("Cached station data could not be read; showing built-in station list. " + cleanError(e));
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:923: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        if (stationStatusView != null) stationStatusView.setText("Updating WFO list from NWS...");
+                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:1773: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            statusView.setText("Cache Age: none");
+                               ~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:1775: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            statusView.setText("Cache Age: unknown");
+                               ~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:1777: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            statusView.setText("Cache Age: " + cacheAge(fetchedAt));
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/vip/thatiam/nwslookup/MainActivity.java:1777: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            statusView.setText("Cache Age: " + cacheAge(fetchedAt));
+                               ~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 18 warnings

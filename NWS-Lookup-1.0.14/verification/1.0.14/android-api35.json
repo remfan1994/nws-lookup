@@ -1,0 +1,146 @@
+{
+  "application_id": "vip.thatiam.nwslookup",
+  "version": "1.0.14",
+  "version_code": 15,
+  "android_api": 35,
+  "framework": "Robolectric 4.14.1",
+  "main_activity_sha256": "1f8132603a60ed08e20564cba886f34eeb574588f79ae64bde4128b23f313026",
+  "tests": 22,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 49.297,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.HighlightSettingsTest",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 20.949,
+      "cases": [
+        {
+          "name": "aFreshInstallAndAnEmptyReportStayUnstyled",
+          "seconds": 9.06,
+          "result": "passed"
+        },
+        {
+          "name": "clearIsAnEditableDraftAndSavingAnEmptyListTurnsHighlightsOff",
+          "seconds": 1.442,
+          "result": "passed"
+        },
+        {
+          "name": "presetsAppendEditableTermsAndRepeatedSelectionDoesNotDuplicateThem",
+          "seconds": 2.461,
+          "result": "passed"
+        },
+        {
+          "name": "applyingAndDisablingHighlightsPreservesTheChosenViewTextAndReadingPosition",
+          "seconds": 0.884,
+          "result": "passed"
+        },
+        {
+          "name": "savingWhileFetchProgressOrAnErrorIsVisibleDoesNotReplaceOrStyleTheMessage",
+          "seconds": 0.484,
+          "result": "passed"
+        },
+        {
+          "name": "reportSpanLimitStaysBoundedAcrossRepeatedRendering",
+          "seconds": 2.443,
+          "result": "passed"
+        },
+        {
+          "name": "saveNormalizesTermsAndStylesOnlyMatchingWordsInAllThreeReports",
+          "seconds": 0.336,
+          "result": "passed"
+        },
+        {
+          "name": "malformedStoredHighlightPreferencesFailClosedAndCanBeRepaired",
+          "seconds": 0.534,
+          "result": "passed"
+        },
+        {
+          "name": "invalidDraftsKeepTheEditorOpenAndPreserveTheSavedSetting",
+          "seconds": 0.868,
+          "result": "passed"
+        },
+        {
+          "name": "detailsOpensAnAccessibleMultilineEditorWithAdjacentPresetButton",
+          "seconds": 0.218,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedReportRendersNeverAccumulateSpans",
+          "seconds": 0.646,
+          "result": "passed"
+        },
+        {
+          "name": "savedTermsSurviveActivityRecreationAndAColdReopen",
+          "seconds": 0.518,
+          "result": "passed"
+        },
+        {
+          "name": "cancelAndBackLeaveTheSavedSettingAndCurrentReportUnchanged",
+          "seconds": 0.373,
+          "result": "passed"
+        },
+        {
+          "name": "unsavedAndClearedDraftsSurviveRotationWithoutApplyingThemselves",
+          "seconds": 0.515,
+          "result": "passed"
+        },
+        {
+          "name": "anExistingInstallWithNoHighlightPreferenceHasNoAutomaticPrecipitationEmphasis",
+          "seconds": 0.164,
+          "result": "passed"
+        }
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.LifecycleSoakTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 28.348,
+      "cases": [
+        {
+          "name": "coldReopenCannotReplayAnOldCompletionUnderAnotherOffice",
+          "seconds": 8.831,
+          "result": "passed"
+        },
+        {
+          "name": "inFlightCompletionFollowsFortyActivityRecreations",
+          "seconds": 3.93,
+          "result": "passed"
+        },
+        {
+          "name": "completionWhileStoppedIsDeliveredOnceOnRestart",
+          "seconds": 0.279,
+          "result": "passed"
+        },
+        {
+          "name": "completionDuringTheStartupCacheReadIsNotLost",
+          "seconds": 0.15,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedReadOnlyDialogsFiltersAndCanceledFetchesStayOffline",
+          "seconds": 14.96,
+          "result": "passed"
+        },
+        {
+          "name": "completionAfterFreshCreateBeforeStartIsDelivered",
+          "seconds": 0.074,
+          "result": "passed"
+        },
+        {
+          "name": "ageRefreshAndResumePreserveTheChosenReportAndScroll",
+          "seconds": 0.124,
+          "result": "passed"
+        }
+      ]
+    }
+  ],
+  "limitations": "JVM Android framework tests; no physical device or emulator used."
+}

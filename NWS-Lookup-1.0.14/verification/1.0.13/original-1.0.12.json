@@ -1,0 +1,181 @@
+{
+  "run": "original-1.0.12",
+  "android_api": 35,
+  "runtime": "Robolectric 4.14.1 on JDK 17",
+  "main_activity_sha256": "2947548ea096a2f29b20aa50277026ee7d331501fcce5ad13f873b3147ae76c3",
+  "note": "Original production source; temporary runtime smoke omitted",
+  "tests": 17,
+  "failures": 8,
+  "errors": 0,
+  "skipped": 0,
+  "test_seconds": 17.481,
+  "suites": [
+    {
+      "class": "vip.thatiam.nwslookup.NetworkLongevityTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 3.972,
+      "recorded_timestamp": "2026-10-20T22:31:04",
+      "cases": [
+        {
+          "name": "failedWeatherCommitPreservesThePreviouslySavedReport",
+          "seconds": 3.972,
+          "result": "failed",
+          "failure_type": "org.junit.ComparisonFailure",
+          "failure_message": "org.junit.ComparisonFailure: failed commit must not replace the cache seen by a recreated Activity expected:<...\",\"fetchedAt\":\"2026-[01-01T00:00:00Z\",\"afdFetchedAt\":\"\",\"dailyFetchedAt\":\"\",\"hourlyFetchedAt\":\"2026-01-01T00:00:00Z\",\"afdUpdated\":\"\",\"dailyUpdated\":\"\",\"hourlyUpdated\":\"\",\"afdText\":\"\",\"hourlyText\":\"Original saved weather]\",\"dailyText\":\"\"}> but was:<...\",\"fetchedAt\":\"2026-[10-20T15:31:08.165518962-07:00\",\"afdFetchedAt\":\"\",\"dailyFetchedAt\":\"\",\"hourlyFetchedAt\":\"2026-10-20T15:31:08.165518962-07:00\",\"afdUpdated\":\"\",\"dailyUpdated\":\"\",\"hourlyUpdated\":\"2026-10-20T11:30:00-07:00\",\"afdText\":\"\",\"hourlyText\":\"Tue 12 PM  0 C  --% precipitation  Unsaved report 0]\",\"dailyText\":\"\"}>"
+        }
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.CacheLongevityTest",
+      "tests": 9,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 5.044,
+      "recorded_timestamp": "2026-10-20T22:26:13",
+      "cases": [
+        {
+          "name": "modernUnknownFetchTimesAreNotReplacedByAnotherViewsNewerFetchTime",
+          "seconds": 0.044,
+          "result": "failed",
+          "failure_type": "org.junit.ComparisonFailure",
+          "failure_message": "org.junit.ComparisonFailure: an explicitly unknown hourly fetch time must stay unknown expected:<[]> but was:<[2040-02-01T12:00:00Z]>"
+        },
+        {
+          "name": "repeatedOfficeSwitchesRestoreOnlyTheMatchingSavedReports",
+          "seconds": 4.317,
+          "result": "passed"
+        },
+        {
+          "name": "tenThousandSerializationCyclesKeepEachReportIdentityAndBoundedSize",
+          "seconds": 0.339,
+          "result": "passed"
+        },
+        {
+          "name": "wrongTypeReportFieldsDoNotBecomeWeatherText",
+          "seconds": 0.022,
+          "result": "failed",
+          "failure_type": "org.junit.ComparisonFailure",
+          "failure_message": "org.junit.ComparisonFailure: wrong-type hourly text expected:<[]> but was:<[null]>"
+        },
+        {
+          "name": "persistedFontStepIsClampedOnStartup",
+          "seconds": 0.044,
+          "result": "failed",
+          "failure_type": "java.lang.AssertionError",
+          "failure_message": "java.lang.AssertionError: font preference below supported bound"
+        },
+        {
+          "name": "legacyMigrationRunsOnceAndDoesNotRelabelOlderReports",
+          "seconds": 0.021,
+          "result": "passed"
+        },
+        {
+          "name": "malformedAndOversizedCacheCannotStrandStartup",
+          "seconds": 0.16,
+          "result": "passed"
+        },
+        {
+          "name": "wrongTypePreferencesDoNotCrashColdActivityStartup",
+          "seconds": 0.023,
+          "result": "failed",
+          "failure_type": "java.lang.ClassCastException",
+          "failure_message": "java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')"
+        },
+        {
+          "name": "fiftyDiskReloadsDoNotGrowTheSavedCache",
+          "seconds": 0.074,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "CACHE_OFFICE_SWITCH cycles=200 switches=400",
+        "CACHE_SERIALIZATION cycles=10000 minChars=985 maxChars=985",
+        "CACHE_DISK_RELOAD cycles=50 maxBytes=1651"
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.LifecycleSoakTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 0.188,
+      "recorded_timestamp": "2026-10-20T22:26:18",
+      "cases": [
+        {
+          "name": "coldReopenCannotReplayAnOldCompletionUnderAnotherOffice",
+          "seconds": 0.188,
+          "result": "failed",
+          "failure_type": "java.lang.AssertionError",
+          "failure_message": "java.lang.AssertionError: old MTR completion was replayed under SGX expected null, but was:<vip.thatiam.nwslookup.MainActivity$WeatherBundle@4b99d57e>"
+        }
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.CacheWriteFailureTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 3.272,
+      "recorded_timestamp": "2026-10-20T22:27:57",
+      "cases": [
+        {
+          "name": "interruptedWritesAlwaysKeepThePreviousOfficeList",
+          "seconds": 3.272,
+          "result": "failed",
+          "failure_type": "org.junit.internal.ArrayComparisonFailure",
+          "failure_message": "failed update must preserve the complete prior office list: array lengths differed, expected.length=68 actual.length=1; arrays first differed at element [1]; expected:<34> but was:<end of array>"
+        }
+      ]
+    },
+    {
+      "class": "vip.thatiam.nwslookup.NetworkLongevityTest",
+      "tests": 5,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "test_seconds": 5.005,
+      "recorded_timestamp": "2026-10-20T22:28:52",
+      "cases": [
+        {
+          "name": "mappingExpiryAndRetiredUrlRetryStayBounded",
+          "seconds": 3.68,
+          "result": "passed"
+        },
+        {
+          "name": "deeplyNestedResponseFailsWithoutStackOverflow",
+          "seconds": 0.036,
+          "result": "failed",
+          "failure_type": "java.lang.StackOverflowError",
+          "failure_message": "java.lang.StackOverflowError"
+        },
+        {
+          "name": "oversizedAndPartialResponsesCannotBypassLimits",
+          "seconds": 0.32,
+          "result": "passed"
+        },
+        {
+          "name": "repeatedHttpSuccessAndFailuresCloseAllConnections",
+          "seconds": 0.102,
+          "result": "passed"
+        },
+        {
+          "name": "failedFetchesPreserveCacheAndReleaseCoordinator",
+          "seconds": 0.866,
+          "result": "passed"
+        }
+      ],
+      "measurements": [
+        "MAPPING_SOAK: 200 expiry/404/410/outage cases, request bounds held",
+        "RESPONSE_LIMIT_SOAK: 40 oversized responses rejected and closed",
+        "NETWORK_SOAK: 1500 operations, 1800 connections, all closed",
+        "COORDINATOR_SOAK: 600 fetches, 150 successes, 450 preserved-cache failures"
+      ]
+    }
+  ]
+}
